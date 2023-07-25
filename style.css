@@ -1,0 +1,70 @@
+* {
+    color: aqua;
+}
+
+body {
+    justify-content: center;
+    background-color: green;
+}
+
+.welcome {
+    background-color: antiquewhite;
+    padding: 0.9rem;
+    border-radius: 2rem;
+    width: 60%;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    margin: 2rem;
+}
+
+header {
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    align-content: center;
+}
+form button{
+    min-width: 15rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(143, 74, 10);
+    background-color: blanchedalmond;
+}
+.create-new-page{
+    display: none;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    margin: 5rem;
+}
+.sign-in-page{
+    display: none;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    margin: 5rem;
+}
+.sign-in-page button{
+    font-size: medium;
+    color: brown;
+    display: block;
+    justify-content: center;
+}
+.colorU{
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(218, 159, 245);
+}
+.sss{
+}
+.sign-in {}
+
+.sign-out {}
