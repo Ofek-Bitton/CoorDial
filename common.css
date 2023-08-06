@@ -1,0 +1,24 @@
+* {
+	--bg-color: forestgreen;
+	--main-color: saddlebrown;
+	--content-color: wheat;
+	--content-color-alt: cornsilk;
+	--main-color-hover: rgb(10, 90, 10);
+	--content-color-hover: pink;
+	--input-field-focus: rgb(255, 225, 230);
+	color: aqua;
+}
+html,
+body {
+	margin: 0;
+	display: block;
+	justify-content: center;
+	background-color: forestgreen;
+	/* height:100%; */
+	height: 100%;
+}
+header {
+	min-width: 20rem;
+	display: flex;
+	justify-content: center;
+}

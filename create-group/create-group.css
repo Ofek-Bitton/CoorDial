@@ -1,0 +1,103 @@
+.hello {
+	margin: 0rem;
+}
+.main-group-panel {
+	display: flex;
+	position: relative;
+	height: auto;
+	min-height: 100%;
+}
+.create-group {
+	border-style: solid;
+	border-left: 0;
+	border-bottom: 0;
+	border-top: 0;
+	/* border-color: rgb(10, 90, 10); */
+	padding: 1rem;
+	position: relative;
+	height: auto;
+	color: var(--main-color);
+	background-color: var(--content-color);
+	margin-right: 1rem;
+	padding-right: 1rem;
+}
+.create-group button {
+	color: var(--main-color);
+	width: 100%;
+}
+.create-group-name {
+	color: var(--main-color);
+}
+.create-group-name input {
+	color: var(--main-color);
+}
+.group-container {
+	background-color: var(--content-color);
+	height: auto;
+	width: auto;
+	flex: 1;
+}
+.group-list {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.group {
+	border-style: solid;
+	background-color: var(--content-color-alt);
+	color: var(--main-color);
+	border-width: 0.2rem;
+	border-radius: 0.5rem;
+	padding: 0.4rem;
+	min-height: 10rem;
+}
+.group-name {
+	text-decoration: underline;
+	margin-bottom: 0.4rem;
+}
+.group * {
+	color: var(--main-color);
+}
+.create-group-date {
+	color: var(--main-color);
+	background-color: var(--content-color);
+}
+.create-group-date input{
+	color: var(--main-color);
+	background-color: var(--content-color-alt);
+}
+.create-group-date input:invalid + span::after{
+	content:"✖";
+	color:red;
+}
+.create-group-date input:valid + span::after{
+	content:"✓";
+	color:green;
+}
+.create-group-time {
+	color: var(--main-color);
+	background-color: var(--content-color);
+}
+.create-group-time input{
+	color: var(--main-color);
+	background-color: var(--content-color-alt);
+}
+.create-group-time input:invalid + span::after{
+	content:"✖";
+	color:red;
+}
+.create-group-time input:valid + span::after{
+	content:"✓";
+	color:green;
+}
+.create-group-name input {
+	color: var(--main-color);
+	background-color: var(--content-color-alt);
+	transition: all 0.3s ease;
+}
+.create-group-name input:focus {
+	color: var(--main-color-hover);
+	background-color: var(--input-field-focus);
+}
+.username{
+	color: var(--main-color);
+}
