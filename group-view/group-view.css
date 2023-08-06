@@ -1,25 +1,50 @@
-.hello {
-	margin: 0rem;
-}
-
-.main-group-panel {
-	display: block;
+body {
+	display: flex;
 	position: relative;
 	height: auto;
 	min-height: 100%;
 }
+.main-group-panel {
+	border-style: solid;
+	border-width: 0.2rem;
+	border-radius: 0.4rem;
+	color: var(--main-color);
+	background-color: var(--content-color);
 
+	padding: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 30%;
+	/* color: rgb(0, 0, 0); */
+	position: relative;
+	margin: auto;
+	margin-top: 2rem;
+}
 .group-info {
 	background-color: var(--content-color);
-	color: var(--main-color)
+	color: var(--main-color);
+	width: fit-content;
+	text-align: center;
+	margin: auto;
 }
 
-.survey-button{
-	color:var(--main-color);
+.survey-button {
+	margin: auto;
+	position: relative;
+	width: 20%;
+	color: var(--main-color);
 	background-color: var(--content-color-alt);
 }
-.create-survey{
+.create-survey {
+	color: var(--main-color);
 	display: none;
+	margin: auto;
 	width: fit-content;
 	background-color: var(--content-color);
+}
+
+.create-survey input{
+	color: var(--main-color);
+	background-color: var(--content-color-alt);
 }
