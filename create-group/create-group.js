@@ -49,7 +49,7 @@ function createGroupElement(name, date) {
   const group = document.createElement("div");
   group.classList.add("group");
   groupList.appendChild(group);
-
+  
   const groupName = document.createElement("div");
   groupName.classList.add("group-name");
   groupName.innerText = name;
