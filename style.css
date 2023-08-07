@@ -25,7 +25,7 @@ form {
 	justify-content: center;
 	align-content: center;
 }
-.login-button {
+.login-btn {
 	border-style: solid;
 	border-radius: 0.6rem;
 	border-width: 0.2rem;
@@ -42,7 +42,7 @@ form {
 
 	transition: all 0.3s ease;
 }
-.login-button:hover {
+.login-btn:hover {
 	background-color: var(--content-color-hover);
 	color: var(--main-color-hover);
 }

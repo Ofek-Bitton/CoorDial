@@ -69,9 +69,6 @@ function createGroupElement(name, date) {
     const groupInfo = `Group Name: ${name}<br>Group Date: ${date}`;
     window.location.replace("../group-view/group-view.html");
     sessionStorage.setItem("groupInfo",groupInfo);
-	// window.document.querySelector("body").innerText=(`<pre>${groupInfo}</pre>`);
-	// document.querySelector("body").innerHTML=(`<pre>${groupInfo}</pre>`);
-    // openedGroupWindows.push(newWindow);
   };
 
   // Add the event listener to the "Remove" button

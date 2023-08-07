@@ -29,7 +29,7 @@ body {
 	margin: auto;
 }
 
-.survey-button {
+.create-survey-btn {
 	margin: auto;
 	position: relative;
 	width: 20%;
@@ -38,13 +38,95 @@ body {
 }
 .create-survey {
 	color: var(--main-color);
+	border: solid;
+	border-color: var(--border-color-alt);
+	border-radius: 0.5rem;
+	padding: 0.3rem;
 	display: none;
+	flex-direction: column;
+	justify-content: center;
 	margin: auto;
 	width: fit-content;
 	background-color: var(--content-color);
 }
 
-.create-survey input{
+.create-survey-answer-list {
+	padding: 0;
+	margin-top: 0.2rem;
+	margin-bottom: 1rem;
+}
+.create-survey-answer {
+	display: flex;
+	margin-top: 0.5rem;
+}
+.create-survey-answer input {
+	flex: 1;
+}
+.create-survey input {
 	color: var(--main-color);
 	background-color: var(--content-color-alt);
+}
+.create-survey-question {
+	color: var(--main-color);
+}
+.create-survey-answer-remove {
+	margin-right: 0.5rem;
+	background-color: var(--content-color-alt);
+	color: var(--main-color);
+}
+.create-survey-answer-add {
+	background-color: var(--content-color-alt);
+	color: var(--main-color);
+}
+.create-survey-post {
+	margin-top: 0.2rem;
+	background-color: var(--content-color-alt);
+	color: var(--main-color);
+}
+.create-survey-cancel {
+	margin-top: 0.2rem;
+	background-color: var(--content-color-alt);
+	color: var(--main-color);
+}
+.survey-list {
+	padding: 0;
+}
+.survey-question {
+	color: var(--main-color);
+	text-align: center;
+	font-size: larger;
+}
+.survey {
+	color: var(--main-color);
+	border: solid;
+	border-color: var(--border-color-alt);
+	border-radius: 0.5rem;
+	padding: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	width: fit-content;
+	background-color: var(--content-color);
+}
+.survey-answer label {
+	color: var(--main-color);
+}
+.survey-answer {
+	margin-right: 1rem;
+}
+.survey-answer-container {
+	display: flex;
+	justify-content: space-between;
+}
+.survey-answer-list {
+	padding: 0;
+}
+.survey-answer-stats progress {
+	width: 10rem;
+	color: var(--main-color);
+}
+.survey-answer-stats label {
+	width: 10rem;
+	color: var(--main-color);
 }

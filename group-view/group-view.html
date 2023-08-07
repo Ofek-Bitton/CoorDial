@@ -15,18 +15,50 @@
         <!-- group-info div without content (empty) -->
         <div class="group-info"></div>
         <!-- Add Survey button inside the "group-info" div -->
-        <button class="survey-button" disabled>Open Survey</button>
+        <button class="create-survey-btn">Open Survey</button>
         <div class="create-survey">
-            Question:
-            <input class="create-survey-question"></input>
-            <div class="create-survey-answers">
-                <ul>
-                    
+            <div class="create-survey-question">
+                Question:
+                <input></input>
+            </div>
+            <ul class="create-survey-answer-list">
+            </ul>
+            <button class="create-survey-answer-add">Add answer</button>
+            <button class="create-survey-cancel">Cancel</button>
+            <button class="create-survey-post">Post</button>
+        </div>
+        <ul class="survey-list">
+            <div class="survey">
+                <label class="survey-question">
+                    Am I cool?
+                </label>
+                <ul class="survey-answer-list">
+                    <div class="survey-answer-container">
+                        <div class="survey-answer">
+                            <input type="checkbox">
+                            <label>Yes</label>
+                        </div>
+                        <div class="survey-answer-stats">
+                            <progress value="32" min="0" max="100"></progress>
+                            <label class="survey-answer-votes">32%</label>
+                        </div>
+                    </div>
+                    <div class="survey-answer-container">
+                        <div class="survey-answer">
+                            <input type="checkbox">
+                            <label>ABSOLUTELY!!! :D</label>
+                        </div>
+                        <div class="survey-answer-stats">
+                            <progress value="32" min="0" max="100"></progress>
+                            <label class="survey-answer-votes">32%</label>
+                        </div>
+                    </div>
                 </ul>
             </div>
-        </div>
+        </ul>
     </div>
-    <script src="group-view.js"></script>
+    <script src="create-survey.js"></script>
+    <script src="survey.js"></script>
 </body>
 
 </html>
