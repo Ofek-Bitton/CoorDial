@@ -49,7 +49,7 @@ function createGroupElement(name, date) {
   const group = document.createElement("div");
   group.classList.add("group");
   groupList.appendChild(group);
-  
+
   const groupName = document.createElement("div");
   groupName.classList.add("group-name");
   groupName.innerText = name;
@@ -66,9 +66,10 @@ function createGroupElement(name, date) {
 
   // Function to open the group entry in a new window
   const openGroupEntry = () => {
-    const groupInfo = `Group Name: ${name}<br>Group Date: ${date}`;
+    // const groupInfo = `Group Name: ${name}<br>Group Date: ${date}`;
+    const groupInfo = { name: name, date: date };
     window.location.replace("../group-view/group-view.html");
-    sessionStorage.setItem("groupInfo",groupInfo);
+    sessionStorage.setItem("groupInfo", JSON.stringify(groupInfo));
   };
 
   // Add the event listener to the "Remove" button

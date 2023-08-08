@@ -12,24 +12,36 @@
 
 <body>
     <div class="main-group-panel">
-        <!-- group-info div without content (empty) -->
-        <div class="group-info"></div>
-        <!-- Add Survey button inside the "group-info" div -->
-        <button class="show-surveys">Show surveys</button>
-        <button class="create-survey-btn">Open Survey</button>
-        <div class="create-survey">
-            <div class="create-survey-question">
-                Question:
-                <input></input>
-            </div>
-            <ul class="create-survey-answer-list">
-            </ul>
-            <button class="create-survey-answer-add">Add answer</button>
-            <button class="create-survey-cancel">Cancel</button>
-            <button class="create-survey-post">Post</button>
+        <div class="group-info">
+            <div class="group-info-name"></div>
+            <div class="group-info-date"></div>
         </div>
-        <ul class="survey-list">
-        </ul>
+        <!-- group-info div without content (empty) -->
+
+        <!-- Add Survey button inside the "group-info" div -->
+        <div class="survey-group-panel">
+            <button class="show-surveys">Show surveys</button>
+            <button class="create-survey-btn">Open Survey</button>
+            <div class="create-survey">
+                <div class="create-survey-question">
+                    Question:
+                    <input></input>
+                </div>
+                <ul class="create-survey-answer-list">
+                </ul>
+                <button class="create-survey-answer-add">Add answer</button>
+                <button class="create-survey-cancel">Cancel</button>
+                <button class="create-survey-post">Post</button>
+            </div>
+            <ul class="survey-list">
+            </ul>
+        </div> 
+        <button class="chat"> chat   </button>
+        <button class="menu"> menu   </button>
+        <button class="activities"> activities   </button>
+        <button class="gallery"> gallery   </button>
+        <button class="reminder-board"> <b>Reminder board</b> </button>
+
     </div>
     <script src="surveys.js"></script>
 </body>

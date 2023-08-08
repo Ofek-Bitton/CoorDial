@@ -1,4 +1,3 @@
-const groupInfo = document.querySelector(".group-info");
 const surveyBtn = document.querySelector(".create-survey-btn");
 const survey = document.querySelector(".create-survey");
 const showSurveysBtn = document.querySelector(".show-surveys")
@@ -17,8 +16,17 @@ surveyPost.addEventListener("click", postSurvey);
 surveyAnswerAdd.addEventListener("click", addAnswer);
 surveyCancel.addEventListener("click", cancelSurvey);
 
-groupInfo.innerHTML = sessionStorage.getItem("groupInfo");
+setGroupInfo();
 
+function setGroupInfo() {
+	const groupName = document.querySelector(".group-info-name");
+	const groupDate = document.querySelector(".group-info-date");
+
+	const groupInfoData = JSON.parse(sessionStorage.getItem("groupInfo"));
+	groupName.innerHTML = `${groupInfoData.name}`;
+	groupDate.innerHTML = `date: ${groupInfoData.date}`;
+
+}
 function showSurveys(event) {
 	surveyBtn.style.display = "block";
 	surveyList.style.display = "block";
