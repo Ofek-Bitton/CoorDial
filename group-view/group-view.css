@@ -28,11 +28,20 @@ body {
 	text-align: center;
 	margin: auto;
 }
-
-.create-survey-btn {
+.show-surveys{
 	margin: auto;
+	margin-top: 0.4rem;
 	position: relative;
-	width: 20%;
+	width: 40%;
+	color: var(--main-color);
+	background-color: var(--content-color-alt);
+}
+.create-survey-btn {
+	display:none;
+	margin: auto;
+	margin-top: 0.4rem;
+	position: relative;
+	width: 40%;
 	color: var(--main-color);
 	background-color: var(--content-color-alt);
 }
@@ -89,6 +98,7 @@ body {
 	color: var(--main-color);
 }
 .survey-list {
+	display: none;
 	padding: 0;
 }
 .survey-question {
