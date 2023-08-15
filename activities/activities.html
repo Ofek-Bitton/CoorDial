@@ -19,22 +19,18 @@
 		<div>Users</div>
 		<ul class="users-list">
 			<il class="user">
-				<label>Name</label><br>
+				<div class="user-info">
+					<label class="username">Name</label>
+					<button class="remove-user">
+						Remove
+					</button>
+				</div>
 				<ul class="bring-items-list">
-					<div class="bring-item item-not-deliverd">
-						<label>Food</label>
-						<input class="change-deliver" type="checkbox">
-						<label>Not delivered</label>
-					</div>
-					<div class="bring-item item-deliverd">
-						<label>Water</label>
-						<input class="change-deliver" type="checkbox">
-						<label>Delivered</label>
-					</div>
 				</ul>
+				<input type="text" class="add-item-name"><button class="add-item">Add item</button>
 			</il>
 		</ul>
-		<button>Add user</button>
+		<button class="add-user">Add user</button>
 	</main>
 	<script src="activities.js"></script>
 </body>

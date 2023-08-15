@@ -1,6 +1,62 @@
-.user{
+.user {
 	display: block;
 	background-color: antiquewhite;
+	border-style: solid;
+	padding: 1rem;
+	margin: 0.3rem;
 }
-.bring-items-list{
+.user-info {
+	display: flex;
+	justify-content: center;
+	gap:0.4rem;
+	margin-bottom: 1rem;
+}
+.bring-items-list {
+	border-style: solid;
+	display: none;
+	gap: 0.1rem;
+	flex-direction: column;
+	padding: 0;
+	text-align: left;
+	background-color: black;
+}
+.remove-user {
+}
+.add-user {
+	width: 10rem;
+	margin: auto;
+}
+.users-list {
+	padding: 0;
+	margin: 0.2rem;
+}
+.bring-item {
+	padding: 0.3rem;
+	padding-left:1rem;
+	display: flex;
+	justify-content: space-between;
+}
+.bring-item label{
+
+}
+.remove-item {
+	margin-left: auto;
+}
+.item-deliverd {
+	background-color: lightgreen;
+	transition: all 0.2s ease;
+}
+.item-not-deliverd {
+	background-color: lightcoral;
+	transition: all 0.2s ease;
+}
+.add-item{
+	margin-top: 1rem;
+}
+main {
+	padding: 1rem;
+	background-color: azure;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
