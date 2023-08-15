@@ -197,8 +197,14 @@ body {
 	font-size: large;
 	margin-top: 1rem;
 	 margin-bottom: 1rem; 
+	 transition: all 0.3s ease;
 }
 
+.chat:hover, .menu:hover, .activities:hover, .gallery:hover {
+	background-color: black;
+	color: white;
+
+}
 .reminder-board {
 	text-align: center;
 	margin: auto;
