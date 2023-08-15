@@ -1,47 +1,6 @@
-.login-page {
-	border-style: solid;
-	border-width: 0.2rem;
-	border-radius: 0.4rem;
-	color: var(--main-color);
-	background-color: var(--content-color);
-
-	padding: 0.3rem;
-	display: flex;
-	flex-direction: column;
-	width: fit-content;
-	/* color: rgb(0, 0, 0); */
-	position: relative;
-	top: 40%;
-	margin: auto;
-}
-.login-enter {
-	font-size: medium;
-	color: var(--main-color);
+.user{
 	display: block;
-	justify-content: center;
-	transition: all 0.3s ease;
-	background-color: var(--content-color-alt);
+	background-color: antiquewhite;
 }
-
-.login-enter:hover {
-	background-color: var(--content-color-hover);
-	color: var(--main-color-hover);
-}
-.login-field {
-	padding: 0.2rem;
-
-	display: flex;
-	justify-content: space-between;
-	color: var(--main-color);
-}
-
-.login-field input {
-	color: var(--main-color);
-	background-color: var(--content-color-alt);
-
-	transition: all 0.3s ease;
-}
-.login-field input:focus {
-	color: var(--main-color);
-	background-color: var(--input-field-focus);
+.bring-items-list{
 }

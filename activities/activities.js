@@ -1,12 +1,15 @@
-const username = document.querySelector(".username");
-const password = document.querySelector(".password");
-const enterBtn = document.querySelector(".login-enter");
+const usersList = document.querySelector(".users-list");
 
-enterBtn.addEventListener("click",login);
 
-function login(event){
-    event.preventDefault();
-    sessionStorage.setItem("username", username.value);
-    sessionStorage.setItem("password", password.value);
-    window.location.replace("../create-group/create-group.html");
+for (let i = 0; usersList.childElementCount; i++) {
+    const user = usersList.children[i];
+    const bringItems = user.querySelector(".bring-items-list").children;
+    for (let j = 0; j < bringItems.length; j++) {
+        const changeDeliver = bringItems[j].querySelector(".change-deliver");
+        changeDeliver.addEventListener("click", onDeliveryStatusChanged);
+    }
+}
+
+function onDeliveryStatusChanged(event) {
+
 }
