@@ -12,18 +12,6 @@ for (let i = 0; i < usersList.childElementCount; i++) {
 	const addItemBtn = user.querySelector(".add-item");
 	addItemBtn.addEventListener("click", addItem);
 
-// 	const bringItems = user.querySelector(".bring-items-list").children;
-// 	for (let j = 0; j < bringItems.length; j++) {
-// 		const item = bringItems[j];
-// 		const changeDeliver = item.querySelector(".change-deliver");
-// 		changeDeliver.parentElement.addEventListener(
-// 			"click",
-// 			onDeliveryStatusChanged
-// 		);
-// 
-// 		const removeItemBtn = item.querySelector(".remove-item");
-// 		removeItemBtn.addEventListener("click", removeItem);
-// 	}
 }
 function removeItem(event) {
 	const item = event.target.closest(".bring-item");
