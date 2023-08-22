@@ -16,25 +16,18 @@
 		<h1>Activities</h1>
 	</header>
 	<main>
-		<div>Users</div>
+		<il class="user you">
+			<div class="user-info">
+				<label class="username"></label>
+			</div>
+			<ul class="bring-items-list">
+			</ul>
+			<input type="text" class="add-item-name"><button class="add-item">Add item</button>
+		</il>
+		<div>Other's Duties</div>
 		<ul class="users-list">
-			<il class="user">
-				<label>Name</label><br>
-				<ul class="bring-items-list">
-					<div class="bring-item item-not-deliverd">
-						<label>Food</label>
-						<input class="change-deliver" type="checkbox">
-						<label>Not delivered</label>
-					</div>
-					<div class="bring-item item-deliverd">
-						<label>Water</label>
-						<input class="change-deliver" type="checkbox">
-						<label>Delivered</label>
-					</div>
-				</ul>
-			</il>
 		</ul>
-		<button>Add user</button>
+		<button class="add-user">Add user</button>
 	</main>
 	<script src="activities.js"></script>
 </body>
