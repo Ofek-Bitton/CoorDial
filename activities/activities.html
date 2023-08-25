@@ -16,18 +16,64 @@
 		<h1>Activities</h1>
 	</header>
 	<main>
-		<il class="user you">
-			<div class="user-info">
-				<label class="username"></label>
-			</div>
-			<ul class="bring-items-list">
+		<div class="user-list-container">
+			משתמשים
+			<ul class="user-list">
+				<il>
+					<label>אנטון</label>
+					<button>סנן מוצרים</button>
+					<!-- <label>^</label>
+					<ul class="user-items-list">
+						<il class="item your-item">
+							<label>עוגיות</label>
+						</il>
+						<il class="item your-item">
+							<label>דבק</label>
+						</il>
+					</ul> -->
+				</il>
+				<il>
+					<label>אופק</label>
+					<button>סנן מוצרים</button>
+					<!-- <label>v</label> -->
+				</il>
+				<il>
+					<label>אביאתר</label>
+					<button>סנן מוצרים</button>
+					<!-- <label>v</label> -->
+				</il>
 			</ul>
-			<input type="text" class="add-item-name"><button class="add-item">Add item</button>
-		</il>
-		<div>Other's Duties</div>
-		<ul class="users-list">
-		</ul>
-		<button class="add-user">Add user</button>
+			<button>לא מביאים</button>
+			<button>הפסק סינון</button>
+		</div>
+		<div>
+			מוצרים
+			<ul class="bring-items-list">
+				<il class="item unassigned-item">
+					<label>מים</label>
+					<label>אף אחד</label>
+					<!-- <button class="promise-item-btn">אני אביא</button> -->
+				</il>
+				<il class="item promised-item">
+					<label>קולה</label>
+					<label>אופק</label>
+				</il>
+				<il class="item your-item">
+					<label>עוגיות</label>
+					<label>אנטון(את/ה)</label>
+					<!-- <button class="reject-item-btn">לא מביא</button> -->
+				</il>
+				<il class="item your-item">
+					<label>דבק</label>
+					<label>אנטון(את/ה)</label>
+					<!-- <button class="reject-item-btn">לא מביא</button> -->
+				</il>
+				<il class="item promised-item">
+					<label>תפוזים</label>
+					<label>אביאתר</label>
+				</il>
+			</ul>
+		</div>
 	</main>
 	<script src="activities.js"></script>
 </body>
