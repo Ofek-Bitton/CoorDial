@@ -2,10 +2,19 @@
 
 const userList = document.querySelector(".users-list");
 const itemsList = document.querySelector(".items-list");
+const addItemsDropdown = document.querySelector(".add-items-list");
 const unassignedFilterBtn = document.querySelector(".unassigned-filter");
 const removeFiltersBtn = document.querySelector(".remove-filters");
 
 unassignedFilterBtn.addEventListener("click", unassignedFilterBtnClicked);
+
+const availableItems = ["Gapple", "Bananaphone", "Ligma"];
+availableItems.forEach((item) => {
+	const option = document.createElement("option");
+	option.value = item;
+	option.text = item;
+	addItemsDropdown.appendChild(option);
+});
 
 setUsers();
 function setUsers() {

@@ -53,8 +53,7 @@ main {
 	padding: 0;
 	direction: rtl;
 }
-.not-group-member{
-	
+.not-group-member {
 	border-style: solid;
 	gap: 0.7rem;
 	display: flex;
@@ -63,4 +62,6 @@ main {
 	background-color: var(--content-color);
 	width: fit-content;
 	margin: 0;
+}
+.add-items-container {
 }
