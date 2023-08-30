@@ -7,16 +7,67 @@ const unassignedFilterBtn = document.querySelector(".unassigned-filter");
 const removeFiltersBtn = document.querySelector(".remove-filters");
 
 unassignedFilterBtn.addEventListener("click", unassignedFilterBtnClicked);
+addItemsDropdown.addEventListener("change", addItem);
 
 const availableItems = ["Gapple", "Bananaphone", "Ligma"];
-availableItems.forEach((item) => {
-	const option = document.createElement("option");
-	option.value = item;
-	option.text = item;
-	addItemsDropdown.appendChild(option);
-});
-
+setAddItems();
 setUsers();
+
+function setAddItems() {
+	for (let i = 0; i < availableItems.length; i++) {
+		const item = availableItems[i];
+		const option = document.createElement("option");
+		option.value = item;
+		option.text = item;
+		addItemsDropdown.appendChild(option);
+	}
+}
+function addItem(event) {
+	const value = addItemsDropdown.value;
+	if (value === "") {
+		return;
+	}
+	const option = addItemsDropdown.options[addItemsDropdown.selectedIndex];
+	addItemsDropdown.value = "";
+	option.remove();
+
+	// <il class="item unassigned-item">
+	//  <button class="promise-item">V</button>
+	// 	<label>מים</label>
+	// 	<label class="item-user-name">אף אחד</label>
+	// </il>;
+	const item = document.createElement("il");
+	item.classList.add("item");
+	item.classList.add("unassigned-item");
+
+	const promiseItem = document.createElement("button");
+	promiseItem.classList.add("promise-item");
+	promiseItem.innerText = "V";
+	promiseItem.addEventListener("click", onPromisingItem);
+	item.appendChild(promiseItem);
+
+	const itemName = document.createElement("label");
+	itemName.innerText = value;
+	item.appendChild(itemName);
+
+	const userName = document.createElement("label");
+	userName.innerText = "אף אחד";
+	userName.classList.add("item-user-name");
+	item.appendChild(userName);
+	itemsList.prepend(item);
+}
+function onPromisingItem(event) {
+	const item = event.target.parentElement;
+	item.remove();
+	event.target.remove();
+	item.classList.remove("unassigned-item");
+	item.classList.add("your-item");
+
+	const userName = item.querySelector(".item-user-name");
+	userName.innerText = "אנטון(את/ה)";
+
+	itemsList.appendChild(item);
+}
 function setUsers() {
 	// Add logic to add user to userList.
 
