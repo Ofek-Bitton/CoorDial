@@ -3,10 +3,10 @@
 const userList = document.querySelector(".users-list");
 const itemsList = document.querySelector(".items-list");
 const addItemsDropdown = document.querySelector(".add-items-list");
-// const unassignedFilterBtn = document.querySelector(".unassigned-filter");
+const unassignedFilterBtn = document.querySelector(".unassigned-filter");
 const removeFiltersBtn = document.querySelector(".remove-filters");
 
-// unassignedFilterBtn.addEventListener("click", unassignedFilterBtnClicked);
+unassignedFilterBtn.addEventListener("click", unassignedFilterBtnClicked);
 addItemsDropdown.addEventListener("change", addItem);
 
 const availableItems = ["Gapple", "Bananaphone", "Ligma"];
@@ -208,19 +208,19 @@ function yourFilterBtnClicked(event) {
 		return !item.classList.contains("your-item");
 	});
 }
-// function unassignedFilterBtnClicked(event) {
-// 	const btn = event.target;
-// 	if (btn.classList.contains("filter-on")) {
-// 		removeFilters();
-// 		btn.classList.remove("filter-on");
-// 		return;
-// 	}
-// 	resetFilterDisplay();
-// 	btn.classList.add("filter-on");
-// 	applyFilter((item) => {
-// 		return item.classList.contains("unassigned-item");
-// 	});
-// }
+function unassignedFilterBtnClicked(event) {
+	const btn = event.target;
+	if (btn.classList.contains("filter-on")) {
+		removeFilters();
+		btn.classList.remove("filter-on");
+		return;
+	}
+	resetFilterDisplay();
+	btn.classList.add("filter-on");
+	applyFilter((item) => {
+		return item.classList.contains("unassigned-item");
+	});
+}
 // Take predicate that take the item as parameter.
 // If it returns true the item will be hidden, otherwise display flex.
 function applyFilter(predicate) {
