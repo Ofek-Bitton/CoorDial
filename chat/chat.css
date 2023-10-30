@@ -1,0 +1,11 @@
+main {
+    background-color: aliceblue;
+}
+.message-content {
+    padding: 1rem;
+    background-color: lightgoldenrodyellow;
+}
+
+.your-message {
+    background-color: lightskyblue;
+}

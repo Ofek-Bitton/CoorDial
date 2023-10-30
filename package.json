@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}

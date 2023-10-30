@@ -7,18 +7,24 @@
 	<title>Sign To CoorDial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" media="screen" href="../common.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="activities.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="chat.css" />
 	<link rel="icon" type="image" href="../iconCoordial.png.png">
 </head>
 
 <body>
-	<header>
-		<h1>Activities</h1>
-	</header>
 	<main>
-		<div>תוסיף כאן את ה-HTML שלך.</div>
+		<h1>Chat</h1>
+		<ul id="messages">
+			<li class="message-container">
+				<div class="message-content">Content</div>
+				<label>Sender Name</label>
+				<label>Date</label>
+			</li>
+		</ul>
+		<input type="text" id="message-box">
+		<button id="send-message">Send</button>
 	</main>
-	<script src="activities.js"></script>
+	<script type="module" src="chat.js"></script>
 </body>
 
 </html>
