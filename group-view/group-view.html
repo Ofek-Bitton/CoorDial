@@ -16,6 +16,7 @@
         <div class="group-info">
             <div class="group-info-name"></div>
             <div class="group-info-date"></div>
+            <textarea class="group-summery"></textarea>
         </div>
         <!-- group-info div without content (empty) -->
 
@@ -37,13 +38,28 @@
             <ul class="survey-list">
             </ul>
         </div>
-        <a class="chat" href="../chat/chat.html"> chat </a>
-        <a class="menu"> menu </a>
-        <a class="activities" href="../activities/activities.html"> activities </a>
-        <a class="gallery" href="../gallery/gallery.html"> gallery</a>
-        <a class="reminder-board"> <b>Reminder board</b> </a>
-
+        <div class="btn-selector">
+            <a class="chat" href="../chat/chat.html">
+                <img height="20px" src="https://play-lh.googleusercontent.com/cF_oWC9Io_I9smEBhjhUHkOO6vX5wMbZJgFpGny4MkMMtz25iIJEh2wASdbbEN7jseAx=w240-h480-rw"></img>
+                chat
+            </a>            
+            <a class="activities" href="../activities/activities.html"> activities </a>
+            <div class="menu">
+                <img height="20px" src="https://img.freepik.com/free-vector/green-restaurant-menu-background_23-2147490040.jpg"></img>
+                <a> menu </a>
+            </div>
+            <a class="gallery" href="../gallery/gallery.html"> gallery</a>
+            <div class="reminder-board-panel">
+                <div class="reminder-board-header">
+                    <h3>Reminder board</h3>
+                    <button class="reminder-board-add">+</button>
+                </div>
+                <div class="reminder-board-content">
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="group-view.js"></script>
     <script src="surveys.js"></script>
 </body>
 

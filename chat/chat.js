@@ -6,14 +6,14 @@ const socket = new WebSocket("ws://localhost:8080/ws");
 
 socket.addEventListener("open", (event) => {
 	console.log("Connected to WebSocket server");
-  // socket.send("Hello, WebSocket server!");
+	// socket.send("Hello, WebSocket server!");
 });
 
 socket.addEventListener("message", (event) => {
-  console.log(`Received: ${event.data}`);
-  if (event.data === undefined) {
-    return;
-  }
+	console.log(`Received: ${event.data}`);
+	if (event.data === undefined) {
+		return;
+	}
 	reciveMessage(event.data);
 });
 
@@ -34,6 +34,9 @@ function sendMessage(event) {
 		content.classList.add("your-message");
 		content.innerText = text;
 		message.appendChild(content);
+
+		const senderName = document.createElement("label");
+		
 	}
 	messageList.appendChild(message);
 }

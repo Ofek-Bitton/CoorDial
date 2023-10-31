@@ -22,6 +22,37 @@ body {
 	margin-top: 2rem;
 }
 
+.btn-selector {
+	display: flex;
+	flex-direction: column;
+}
+
+.reminder-board-panel {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.reminder-board-content {
+	display: grid;
+	gap: 0.3rem;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(167, 220, 167);
+	padding:2rem;
+}
+.reminder-board-note {
+	background-color: white;
+	resize: none;
+	border-radius: 1rem;
+	padding: 0.3rem;
+}
+.reminder-board-header{
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	align-items: center;
+}
 /* .group-info {
 	padding: 0.3rem;
 	border-style: solid;
@@ -35,9 +66,20 @@ body {
 	margin: auto;
 } */
 
+.group-info {
+	display: flex;
+	gap:1rem;
+	flex-direction: column;
+}
 .group-info * {
 	background-color: var(--content-color);
 	color: var(--main-color);
+}
+
+.group-summery {
+	align-self: center;
+	background-color: rgb(167, 220, 167);
+	resize: none;
 }
 
 .group-info-name,
@@ -51,7 +93,6 @@ body {
 	width: fit-content;
 	text-align: center;
 	margin: auto;
-	
 }
 
 .show-surveys {

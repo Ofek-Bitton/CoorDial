@@ -16,17 +16,6 @@ surveyPost.addEventListener("click", postSurvey);
 surveyAnswerAdd.addEventListener("click", addAnswer);
 surveyCancel.addEventListener("click", cancelSurvey);
 
-setGroupInfo();
-
-function setGroupInfo() {
-	const groupName = document.querySelector(".group-info-name");
-	const groupDate = document.querySelector(".group-info-date");
-
-	const groupInfoData = JSON.parse(sessionStorage.getItem("groupInfo"));
-	groupName.innerHTML = `${groupInfoData.name}`;
-	groupDate.innerHTML = `date: ${groupInfoData.date}`;
-
-}
 function showSurveys(event) {
 	surveyBtn.style.display = "block";
 	surveyList.style.display = "block";
