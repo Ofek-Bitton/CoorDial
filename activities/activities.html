@@ -2,71 +2,42 @@
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Sign To CoorDial</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../common.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="activities.css" />
-	<link rel="icon" type="image" href="../iconCoordial.png.png">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Activities Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='activities.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../common.css'>
 </head>
 
 <body>
-	<header>
-		<h1>Activities</h1>
-	</header>
-	<main>
-		<div class="users-list-container">
-			משתמשים
-			<ul class="users-list">
-				<!-- <il class="user">
-					<label class="group-user-name">אנטון</label>
-					<button class="user-filter">סנן מוצרים</button>
-				</il>
-				<il class="user">
-					<label class="group-user-name">אופק</label>
-					<button class="user-filter">סנן מוצרים</button>
-				</il>
-				<il class="user">
-					<label class="group-user-name">אביאתר</label>
-					<button class="user-filter">סנן מוצרים</button>
-				</il> -->
-			</ul>
-			<button class="unassigned-filter">לא מביאים</button>
-			<div class="add-items-container">
-				<select class="add-items-list">
-					<option value="">Select item to add</option>
-				</select>
-			</div>
-		</div>
-		<div>
-			מוצרים
-			<ul class="items-list">
-				<!-- <il class="item unassigned-item">
-					<button class="promise-item">V</button>
-					<label>מים</label>
-					<label class="item-user-name">אף אחד</label>
-				</il> -->
-				<!-- <il class="item promised-item">
-					<label>קולה</label>
-					<label class="item-user-name">אופק</label>
-				</il>
-				<il class="item your-item">
-					<label>עוגיות</label>
-					<label class="item-user-name">אנטון(את/ה)</label>
-				</il>
-				<il class="item your-item">
-					<label>דבק</label>
-					<label class="item-user-name">אנטון(את/ה)</label>
-				</il>
-				<il class="item promised-item">
-					<label>תפוזים</label>
-					<label class="item-user-name">אביאתר</label>
-				</il> -->
-			</ul>
-		</div>
-	</main>
-	<script src="activities.js"></script>
+<h1 class="group-title">
+    Grandpa's birthday
+</h1>
+<h2 class="activity-title"> 
+    Activities
+</h2>
+<div class="activity-ideas">
+    <h3> Activity ideas</h3>
+    <div>
+        <input class="activity-create-textbox" placeholder="Write here" maxlength="20"/>
+        <ul class="activity-ideas-list">
+            <div class="activity-idea">
+                Bingo!
+            </div>
+            <div class="activity-idea">
+                Bingo!
+            </div>
+            <div class="activity-idea">
+                Bingo!
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="equipment-list-container">
+    <h3>Equipment list</h3>
+</div>
 </body>
+<script src='activities.js'></script>
 
 </html>

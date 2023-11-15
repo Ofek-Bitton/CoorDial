@@ -112,6 +112,7 @@ function postSurvey(event) {
 
 		const voteBtn = document.createElement("input");
 		voteBtn.setAttribute("type", "checkbox");
+		voteBtn.addEventListener("change", updateSurveyVotes);
 		surveyAnswer.appendChild(voteBtn);
 
 		const answerText = document.createElement("label");
@@ -148,4 +149,18 @@ function cancelSurvey() {
 function resetSurvey() {
 	surveyQuestionInput.value = "";
 	surveyAnswerList.innerHTML = "";
+}
+function updateSurveyVotes(event) {
+	const list = event.target.closest(".survey-answer-list");
+	let total = 0;
+	const answers = list.querySelectorAll(".survey-answer input");
+	for (let i = 0; i < answers.length; i++){
+		const answer = answers[i];
+		if (answer.checked) {
+			total += 1;
+		}
+	}
+	for (let i = 0; i < list.childElementCount; i++){
+		
+	}
 }

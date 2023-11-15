@@ -1,68 +1,44 @@
-main {
-	padding: 1rem;
-	background-color: azure;
+.group-title {
+	background-color: rgba(255, 255, 255, 0.6);
+	font-size: x-large;
 	text-align: center;
-	display: flex;
+	margin: 2rem;
+	padding: 1rem;
+	border: 0.2rem;
+	border-style: solid;
+}
+.activity-title {
+	background-color: rgba(171, 255, 169, 0.6);
+	font-size: 3rem;
+	text-align: center;
+	margin: 2rem;
+	padding: 1rem;
+	border: 0.2rem;
+	border-style: solid;
+}
+.activity-ideas {
+	display: grid;
 	justify-content: center;
 }
-
-.item {
-	padding: 0.3rem;
-	padding-left: 1rem;
-	display: flex;
-	gap: 0.6rem;
-	justify-content: space-between;
-	border-style: solid;
-	border-width: 0.2rem;
+.activity-ideas h3 {
+    text-align: center;
 }
-.items-list {
-	display: flex;
-	flex-direction: column;
-	padding: 0;
-	background-color: black;
-	width: fit-content;
-	margin: 0;
+.activity-create-textbox {
+	background-color: rgb(213, 255, 222);
+    padding: 1rem;
+    text-align: center;
 }
-.unassigned-item {
-	background-color: lightpink;
+.activity-idea {
+	background-color: white;
+	padding: 1rem;
 }
-.promised-item {
-	background-color: lightgreen;
+.activity-ideas-list {
+    margin-top: 0;
+    padding: 0;
+	height: 5rem;
+	overflow: auto;
 }
-.your-item {
-	background-color: rgb(134, 255, 170);
-}
-.users-list {
-	border-style: solid;
-	gap: 0.7rem;
-	display: flex;
-	flex-direction: column;
-	padding: 0.3rem;
-	background-color: var(--content-color);
-	width: auto;
-	margin: 0;
-}
-.users-list-container {
-	display: flex;
-	flex-direction: column;
-}
-.filter-on {
-	background-color: darkgray;
-}
-.users-items-list {
-	padding: 0;
-	direction: rtl;
-}
-.not-group-member {
-	border-style: solid;
-	gap: 0.7rem;
-	display: flex;
-	flex-direction: column;
-	padding: 0.3rem;
-	background-color: var(--content-color);
-	width: fit-content;
-	margin: 0;
-}
-.promise-item{
-	
+.equipment-list-container{
+    display: grid;
+    justify-content: center;
 }
