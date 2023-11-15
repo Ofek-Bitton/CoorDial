@@ -1,44 +1,93 @@
 .group-title {
-	background-color: rgba(255, 255, 255, 0.6);
-	font-size: x-large;
-	text-align: center;
-	margin: 2rem;
-	padding: 1rem;
-	border: 0.2rem;
-	border-style: solid;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: x-large;
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    border: 0.2rem;
+    border-style: solid;
 }
+
 .activity-title {
-	background-color: rgba(171, 255, 169, 0.6);
-	font-size: 3rem;
-	text-align: center;
-	margin: 2rem;
-	padding: 1rem;
-	border: 0.2rem;
-	border-style: solid;
+    background-color: rgba(171, 255, 169, 0.6);
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    border: 0.2rem;
+    border-style: solid;
 }
+
 .activity-ideas {
-	display: grid;
-	justify-content: center;
+    display: grid;
+    justify-content: center;
 }
+
 .activity-ideas h3 {
     text-align: center;
 }
+
 .activity-create-textbox {
-	background-color: rgb(213, 255, 222);
+    background-color: rgb(213, 255, 222);
     padding: 1rem;
     text-align: center;
 }
+
 .activity-idea {
-	background-color: white;
-	padding: 1rem;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 10px;
+    position: relative;
 }
+
 .activity-ideas-list {
     margin-top: 0;
     padding: 0;
-	height: 5rem;
-	overflow: auto;
+    height: 5rem;
+    overflow: auto;
 }
-.equipment-list-container{
+
+.equipment-list-container {
     display: grid;
     justify-content: center;
+}
+
+.like-icon,
+.dislike-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.add-activity-button,
+.add-responsible-button,
+.delete-responsible-button {
+    background-color: rgb(213, 255, 222);
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    margin-left: 5px;
+}
+
+.responsible-description {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.delete-responsible-button {
+    background-color: rgb(255, 189, 189);
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.responsible-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.like-count,
+.dislike-count {
+    margin-right: 5px;
 }
