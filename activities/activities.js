@@ -10,13 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
             newActivity.classList.add("activity-idea");
             newActivity.innerHTML = `
                 <span class="activity-text">${activityCreateTextbox.value}</span>
-                <span class="like-icon" onclick="likeActivity(this)">👍</span>
-                <span class="dislike-icon" onclick="dislikeActivity(this)">👎</span>
+                <span class="like-icon" >👍</span>
+                <span class="dislike-icon">👎</span>
                 <span class="like-count">0</span>
                 <span class="dislike-count">0</span>
                 <button class="add-responsible-button">+</button>
                 <div class="responsible-list"></div>
             `;
+            newActivity.querySelector(".like-icon").addEventListener("click", likeActivity);
+            newActivity.querySelector(".dislike-icon").addEventListener("click", dislikeActivity);
+
             activityIdeasList.appendChild(newActivity);
             activityCreateTextbox.value = "";
         }
@@ -37,14 +40,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-function likeActivity(element) {
-    const likeCount = element.parentElement.querySelector(".like-count");
+/**
+ * @param {MouseEvent} event 
+ */
+function likeActivity(event) {
+    const activity = event.target.parentElement;
+    const likeCount = event.target.parentElement.querySelector(".like-count");
+    if (activity.classList.contains("activity-liked")) {
+        activity.classList.remove("activity-liked");
+        likeCount.textContent = parseInt(likeCount.textContent) - 1;
+        return;
+    } else if (activity.classList.contains("activity-disliked")) {
+        const dislikeCount = event.target.parentElement.querySelector(".dislike-count");
+        dislikeCount.textContent = parseInt(dislikeCount.textContent) - 1;
+        activity.classList.remove("activity-disliked");
+    }
+    
     likeCount.textContent = parseInt(likeCount.textContent) + 1;
+    activity.classList.add("activity-liked");
 }
 
-function dislikeActivity(element) {
-    const dislikeCount = element.parentElement.querySelector(".dislike-count");
+/**
+ * @param {MouseEvent} event 
+ */
+function dislikeActivity(event) {
+    const activity = event.target.parentElement;
+    const dislikeCount = event.target.parentElement.querySelector(".dislike-count");
+    if (activity.classList.contains("activity-disliked")) {
+        activity.classList.remove("activity-disliked");
+        dislikeCount.textContent = parseInt(dislikeCount.textContent) - 1;
+        return;
+    } else if (activity.classList.contains("activity-liked")) {
+        const likeCount = event.target.parentElement.querySelector(".like-count");
+        likeCount.textContent = parseInt(likeCount.textContent) - 1;
+        activity.classList.remove("activity-liked");
+    }
+    
     dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+    activity.classList.add("activity-disliked");
 }
 
 function deleteResponsible(element) {

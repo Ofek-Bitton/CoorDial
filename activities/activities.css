@@ -38,12 +38,13 @@
     padding: 1rem;
     margin-top: 10px;
     position: relative;
+    border: 0.2rem solid;
 }
 
 .activity-ideas-list {
     margin-top: 0;
     padding: 0;
-    height: 5rem;
+    height: 20rem;
     overflow: auto;
 }
 
@@ -65,7 +66,7 @@
     padding: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
-    border: none;
+    border: 0.1rem solid;
     margin-left: 5px;
 }
 
@@ -90,4 +91,10 @@
 .like-count,
 .dislike-count {
     margin-right: 5px;
+}
+.activity-liked {
+    background-color: rgb(213, 255, 214);
+}
+.activity-disliked {
+    background-color: rgb(255, 151, 151);
 }
