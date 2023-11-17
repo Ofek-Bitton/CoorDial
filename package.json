@@ -5,6 +5,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "firebase": "^10.6.0",
     "ws": "^8.14.2"
   }
 }

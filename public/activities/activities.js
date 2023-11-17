@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const addActivityButton = document.querySelector(".add-activity-button");
-    const addResponsibleButton = document.querySelector(".add-responsible-button");
     const activityCreateTextbox = document.querySelector(".activity-create-textbox");
     const activityIdeasList = document.querySelector(".activity-ideas-list");
 
