@@ -1,27 +1,47 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+import { firebaseConfig } from "../firebaseConfig.js";
+import {
+	getFirestore,
+	collection,
+	onSnapShot,
+	getDocs,
+	addDoc,
+	deleteDoc,
+	doc,
+} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
+
 const messageList = document.getElementById("messages");
 const messageText = document.getElementById("message-box");
 const sendBtn = document.getElementById("send-message");
 
-const socket = new WebSocket("ws://localhost:8080/ws");
+const app = initializeApp(firebaseConfig);
+const db = getFirestore();
+const dbGroupColRef = collection(db, "messages");
 
-socket.addEventListener("open", (event) => {
-	console.log("Connected to WebSocket server");
-	// socket.send("Hello, WebSocket server!");
-});
-
-socket.addEventListener("message", (event) => {
-	console.log(`Received: ${event.data}`);
-	if (event.data === undefined) {
-		return;
-	}
-	reciveMessage(event.data);
-});
-
-socket.addEventListener("close", (event) => {
-	console.log("WebSocket connection closed");
-});
+// const socket = new WebSocket("ws://localhost:8080/ws");
+// 
+// socket.addEventListener("open", (event) => {
+// 	console.log("Connected to WebSocket server");
+// 	// socket.send("Hello, WebSocket server!");
+// });
+// 
+// socket.addEventListener("message", (event) => {
+// 	console.log(`Received: ${event.data}`);
+// 	if (event.data === undefined) {
+// 		return;
+// 	}
+// 	reciveMessage(event.data);
+// });
+// 
+// socket.addEventListener("close", (event) => {
+// 	console.log("WebSocket connection closed");
+// });
 
 sendBtn.addEventListener("click", sendMessage);
+
+function loadChat() {
+	// load 
+}
 
 function sendMessage(event) {
 	const text = messageText.value;
@@ -39,6 +59,7 @@ function sendMessage(event) {
 		
 	}
 	messageList.appendChild(message);
+	// add message to database
 }
 
 function reciveMessage(data) {
