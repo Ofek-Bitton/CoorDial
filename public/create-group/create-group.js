@@ -38,11 +38,15 @@ function getSavedGroups() {
 
 function loadSavedGroups() {
 	// const savedGroups = getSavedGroups();
-	
+
 	getDocs(dbGroupColRef).then((snapshot) => {
 		snapshot.docs.forEach((doc) => {
 			const data = doc.data();
-			createGroupElement(data.name, new Data(data.time));
+			const group = createGroupElement(
+				groupNameInput.value,
+				new Date(data.date)
+			);
+			group["dataId"] = doc.id;
 		});
 	});
 }
@@ -60,9 +64,11 @@ function addGroup(event) {
 	const date = new Date(time);
 
 	const group = createGroupElement(groupNameInput.value, date);
-	addDoc(dbGroupColRef, { name: groupNameInput.value, date: date }).then((docRef) => {
-		group["dataId"] = docRef.id;
-	});
+	addDoc(dbGroupColRef, { name: groupNameInput.value, date: date }).then(
+		(docRef) => {
+			group["dataId"] = docRef.id;
+		}
+	);
 	// Save the groups to localStorage
 	saveGroups();
 }
@@ -125,10 +131,8 @@ function saveGroups() {
 	for (let i = 0; i < groupList.children.length; i++) {
 		// const name = groupList.children[i].querySelector(".group-name").innerText;
 		// const time = groupList.children[i].querySelector(".group-date").dataDate;
-
 	}
 	// localStorage.setItem("saved-groups", JSON.stringify(groupSave));
-
 }
 function toDateString(date) {
 	return date.toLocaleString("en-GB", {
