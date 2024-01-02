@@ -43,8 +43,8 @@ function loadSavedGroups() {
 		snapshot.docs.forEach((doc) => {
 			const data = doc.data();
 			const group = createGroupElement(
-				groupNameInput.value,
-				new Date(data.date)
+				data.name,
+				data.date.toDate()
 			);
 			group["dataId"] = doc.id;
 		});
@@ -111,6 +111,7 @@ function createGroupElement(name, date) {
 		const name = groupToRemove.querySelector(".group-name").innerText;
 		const time = groupToRemove.querySelector(".group-date").dataDate;
 		const docRef = doc(db, "groups", groupToRemove.dataId);
+		deleteDoc(docRef)
 
 		groupToRemove.remove();
 		// saveGroups();
