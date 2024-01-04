@@ -1,4 +1,4 @@
-.welcome {
+/* .s_welcome {
 	border-style: solid;
 	border-width: 0.2rem;
 	border-radius: 2rem;
@@ -8,12 +8,12 @@
 	padding: 0.9rem;
 	width: 60%;
 
-	color: var(--main-color);
-	background-color: var(--content-color);
+	color: var(--color-main);
+	background-color: var(--color-content);
 	font-size: 2rem;
 	text-align: center;
 }
-.welcome-page {
+.s_welcome-page {
 	height: 100%;
 }
 form {
@@ -25,7 +25,7 @@ form {
 	justify-content: center;
 	align-content: center;
 }
-.login-btn {
+.s_login-btn {
 	border-style: solid;
 	border-radius: 0.6rem;
 	border-width: 0.2rem;
@@ -33,16 +33,57 @@ form {
 	min-width: 15rem;
 	font-size: 1.5rem;
 
-	color: var(--main-color);
-	background-color: var(--content-color);
+	color: var(--color-main);
+	background-color: var(--color-content);
 	display: flex;
 	justify-content: center;
 	text-decoration: none;
 
 	transition: all 0.3s ease;
 }
-.login-btn:hover {
-	background-color: var(--content-color-hover);
-	color: var(--main-color-hover);
+.s_login-btn:hover {
+	background-color: var(--color-content-hover);
+	color: var(--color-main-hover);
 }
-
+ */
+form {
+	display: grid;
+	margin-top: 30vh;
+	justify-content: center;
+	gap: 0.3rem;
+}
+.s_input {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: max-content max-content;
+	gap: 0.3rem;
+	margin-bottom: 1rem;
+	background-color: var(--color-bg-alt);
+	padding: 2rem;
+	border-radius: 1rem;
+	border-style: solid;
+	border-color: var(--color-border);
+}
+.s_welcome {
+	text-align: center;
+	background-color: var(--color-bg-header);
+	width: calc(100% - 2rem);
+	border-style: solid;
+	border-radius: 1rem;
+	border-width: 0.2rem;
+	padding: 0.4rem 0;
+	margin-bottom: 0;
+}
+.s_insirational-quote {
+	background-color: rgba(26, 232, 232, 0.5);
+	border-radius: 3rem;
+	font-size: larger;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	padding: 2rem;
+	border-style: solid;
+	transition: background-color 0.2s;
+}
+.s_insirational-quote:hover{
+	background-color: rgb(0, 255, 255);
+	transition: background-color 0.2s;
+}

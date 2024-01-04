@@ -8,38 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="../common.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="create-group.css" />
-    
+
 </head>
 
 <body>
     <!-- <h1 class="hello"></h1> -->
-    <div class="main-group-panel">
-        <div class="create-group">
-            <div class="username">
-
-            </div>
-            <div class="create-group-name">
-                Name:
-                <input />
-            </div>
-            <!-- <div class="create-group-date">
-                Date:
-                <input type="date" required />
-                <span></span>
-            </div> -->
-            <div class="create-group-time">
-                Time:
-                <input type="datetime-local" required/>
-                <span></span>
-            </div>
-            <button class="add-group">Add</button>
+    <header>
+        <h1 id="welcome"></h1>
+    </header>
+    <div class="s_create-group">
+        <h2>Create a new group</h2>
+        <div class="s_group-settings">
+            <label>Name</label>
+            <input id="new-group-name" type="text">
+            <label>Date</label>
+            <input id="new-group-date" type="datetime-local">
         </div>
-        <div class="group-container">
-            <ul class="group-list">
-            </ul>
-        </div>
+        <button id="create-group-btn">Create!</button>
     </div>
-    <script type="module" src="create-group.js"></script>
+    <ul id="groups" class="s_group-panel">
+        <!-- <il class="s_group q_group">
+            <h2 class="q_name">NAME</h2>
+            <h3 class="q_date">DATE</h3>
+            <button>Enter</button>
+            <button class="s_delete-btn">Delete</button>
+        </il> -->
+    </ul>
+    <script type="module" defer src="create-group.js"></script>
 </body>
 
 </html>

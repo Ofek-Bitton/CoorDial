@@ -7,21 +7,28 @@
 	<title>Group</title>
 	<link rel="stylesheet" href="common.css" />
 	<link rel="stylesheet" href="style.css" />
-	<link rel="icon" type="image" href="iconCoordial.png.png">
+	<!-- <link rel="icon" type="image" href="iconCoordial.png.png"> -->
 	<!-- Add link to icon -->
 </head>
 
 <body>
-	<div class="welcome-page">
+	<div class="s_welcome-page">
 		<header>
-			<h1 class="welcome">Welcome</h1>
+			<h1 class="s_welcome">Welcome</h1>
+			<div class="s_insirational-quote">Make it matter!</div>
 		</header>
 		<form>
-			<div>
-		<a href="login/login.html" class="login-btn">Login</a><div></div>
+			<div class="s_input">
+				<label>Name</label>
+				<input type="text" id="name-field" placeholder="Your name" required>
+				<label>Password</label>
+				<input id="password-field" placeholder="Your password" required>
+			</div>
+			<button id="login">Login</button>
+			<!-- <button class="q_reuse-btn">Use enter last login</button> -->
 		</form>
 	</div>
-	<script type="module" src="./app.js"></script>
+	<script defer src="app.js"></script>
 </body>
 
 </html>

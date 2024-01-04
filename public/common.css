@@ -1,4 +1,5 @@
 * {
+	/* OLD VARIABLES */
 	--bg-color: forestgreen;
 	--main-color: saddlebrown;
 	--content-color: wheat;
@@ -8,18 +9,54 @@
 	--input-field-focus: rgb(255, 225, 230);
 	--border-color: saddlebrown;
 	--border-color-alt: burlywood;
+	/* NEW */
+	--color-page-bg: rgb(255, 209, 202);
+	--color-main: saddlebrown;
+	--color-main-hover: rgb(10, 90, 10);
+
+	--color-border: black;
+	--color-border-hover: white;
+
+	--color-input-field-bg: white;
+	--color-input-field-bg-focus: rgb(255, 225, 230);
+
+	--color-bg: wheat;
+	--color-bg-alt: cornsilk;
+	--color-bg-header: rgba(180, 255, 142, 0.509);
+	--color-btn-bg: white;
+	--color-bg-hover: pink;
 }
 html,
 body {
 	margin: 0;
 	display: block;
 	justify-content: center;
-	background-color: rgb(255, 190, 168);
+	background-color: var(--color-page-bg);
 	/* height:100%; */
 	height: 100%;
 }
 header {
-	min-width: 20rem;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	justify-items: center;
+}
+button {
+	background-color: var(--color-btn-bg);
+	padding: 1rem 2rem;
+	border-radius: 0.6rem;
+	font-size: large;
+	border-color: var(--color-border);
+	border-style: solid;
+	transition: background-color 0.6s;
+}
+button:hover {
+	background-color: var(--color-bg-hover);
+	transition-duration: 0.6s;
+}
+input {
+	background-color: var(--color-input-field-bg);
+	transition: background-color 0.2s;
+}
+input:focus {
+	background-color: var(--color-input-field-bg-focus);
+	transition: background-color 0.2s;
 }
