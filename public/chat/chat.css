@@ -1,11 +1,44 @@
 main {
-    background-color: aliceblue;
+	background-color: aliceblue;
+	display: grid;
 }
-.message-content {
-    padding: 1rem;
-    background-color: lightgoldenrodyellow;
+.s_messages {
+	padding: 0;
+	padding: 0 4rem;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+    list-style-type: none;
 }
-
-.your-message {
-    background-color: lightskyblue;
+.s_message-content {
+	padding: 1rem;
+}
+.s_message-container {
+	background-color: lightgoldenrodyellow;
+	border: solid;
+	align-self: flex-start;
+    margin-top: 0.5rem;
+	margin-right: 2rem;
+    width: max-content;
+}
+.s_user {
+	display: flex;
+	border-style: solid;
+	border-color: black;
+	border-bottom: 0;
+	border-right: 0;
+	border-left: 0;
+	font-family: cursive;
+	color: darkslateblue;
+}
+.s_your-message {
+	align-self: flex-end;
+	background-color: lightskyblue;
+	margin-left: 2rem;
+	margin-right: 0;
+	justify-self: end;
+}
+.s_textbox {
+	display: flex;
+	justify-content: center;
 }

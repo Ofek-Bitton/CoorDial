@@ -12,17 +12,18 @@
 </head>
 
 <body>
+	<header>
+		<h1>
+			Chat
+		</h1>
+	</header>
 	<main>
-		<h1>Chat</h1>
-		<ul id="messages">
-			<li class="message-container">
-				<div class="message-content">Content</div>
-				<label>Sender Name</label>
-				<label>Date</label>
-			</li>
+		<ul class="s_messages" id="messages">
 		</ul>
-		<input type="text" id="message-box">
-		<button id="send-message">Send</button>
+		<div class="s_textbox">
+			<textarea  type="text" id="message-box"></textarea>
+			<button id="send-message">Send</button>
+		</div>
 	</main>
 	<script type="module" src="chat.js"></script>
 </body>

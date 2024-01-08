@@ -3,81 +3,113 @@ import { firebaseConfig } from "../firebaseConfig.js";
 import {
 	getFirestore,
 	collection,
-	onSnapShot,
+	onSnapshot,
 	getDocs,
 	addDoc,
 	deleteDoc,
 	doc,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
 
+/**
+ * @typedef {{name:String, password:String}} UserData
+ * @typedef {{user:String, date:number, text:String, docID:any, element:HTMLElement,hasBeenFound:bool}} MessageData
+ */
+
+/**
+ * @type {UserData}
+ */
+const userData = JSON.parse(sessionStorage.getItem("user-data"));
+if (userData == null) {
+	userData = {};
+	console.error("User data was not found. Restart this session.");
+}
+if (userData.name === undefined) {
+	console.error("No name in user data found.");
+	userData["name"] = "NO_NAME";
+}
+if (userData.password === undefined) {
+	console.error("No password in user data found.");
+	userData["password"] = "NO_PASSWORD";
+}
 const messageList = document.getElementById("messages");
 const messageText = document.getElementById("message-box");
 const sendBtn = document.getElementById("send-message");
+/**
+ * @type {Array<MessageData>}
+ */
+const messages = [];
+
+sendBtn.addEventListener("click", () => {
+	sendMessage(messageText.value, userData.name);
+	messageText.value = "";
+});
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
-const dbGroupColRef = collection(db, "messages");
+const colRef = collection(db, "messages");
 
-// const socket = new WebSocket("ws://localhost:8080/ws");
-// 
-// socket.addEventListener("open", (event) => {
-// 	console.log("Connected to WebSocket server");
-// 	// socket.send("Hello, WebSocket server!");
-// });
-// 
-// socket.addEventListener("message", (event) => {
-// 	console.log(`Received: ${event.data}`);
-// 	if (event.data === undefined) {
-// 		return;
-// 	}
-// 	reciveMessage(event.data);
-// });
-// 
-// socket.addEventListener("close", (event) => {
-// 	console.log("WebSocket connection closed");
-// });
-
-sendBtn.addEventListener("click", sendMessage);
-
-function loadChat() {
-	// load 
+onSnapshot(colRef, (snapshot) => {
+	snapshot.docs
+		.sort((a, b) => {
+			return a.data().date - b.data().date;
+		})
+		.forEach((doc) => {
+			const data = doc.data();
+			if (data.user == "") {
+				return;
+			}
+			/**
+			 * @type {MessageData}
+			 */
+			const msgData = {
+				user: data.user,
+				date: data.date,
+				text: data.text,
+				docID: doc.id,
+				hasBeenFound: false,
+			};
+			if (hasMessage(messages, doc.id)) {
+				msgData.hasBeenFound = true;
+				return;
+			}
+			const message = createMessage(data.text, data.user);
+			if (userData.name === data.user) {
+				message.classList.add("s_your-message");
+			}
+			msgData.element = message;
+			messages.push(msgData);
+			messageList.appendChild(message);
+		});
+});
+/**
+ * @param {Array<MessageData>} messages
+ * @param {any} id
+ * @returns {bool}
+ */
+function hasMessage(messages, id) {
+	for (let i = 0; i < messages.length; i++) {
+		if (messages[i].docID === id) {
+			return true;
+		}
+	}
+	return false;
 }
-
-function sendMessage(event) {
-	const text = messageText.value;
-	socket.send(text);
+function sendMessage(text, user) {
+	addDoc(colRef, { text: text, user: user, date: Date.now() });
+}
+function createMessage(text, name) {
 	const message = document.createElement("il");
-	message.classList.add("message-container");
+	message.classList.add("s_message-container");
 	{
 		const content = document.createElement("div");
-		content.classList.add("message-content");
-		content.classList.add("your-message");
+		content.classList.add("s_message-content");
 		content.innerText = text;
 		message.appendChild(content);
 
-		const senderName = document.createElement("label");
-		
+		const user = document.createElement("label");
+		user.classList.add("s_user");
+		user.innerText = name;
+		message.appendChild(user);
 	}
-	messageList.appendChild(message);
-	// add message to database
+	return message;
 }
-
-function reciveMessage(data) {
-	const message = document.createElement("il");
-	message.classList.add("message-container");
-	{
-		const content = document.createElement("div");
-		content.classList.add("message-content");
-		content.innerText = data;
-		message.appendChild(content);
-	}
-	messageList.appendChild(message);
-}
-
-// <li class="message-container">
-// 	<div class="message-content">Content</div>
-// 	<label>Sender Name</label>
-// 	<label>Date</label>
-// </li>
-
-// python -m http.server 4000

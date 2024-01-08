@@ -14,8 +14,7 @@ function setGroupInfo() {
 	const groupName = document.querySelector(".group-info-name");
 	const groupDate = document.querySelector(".group-info-date");
 
-	const groupInfoData = JSON.parse(sessionStorage.getItem("groupInfo"));
+	const groupInfoData = JSON.parse(localStorage.getItem("group-data"));
 	groupName.innerHTML = `${groupInfoData.name}`;
 	groupDate.innerHTML = `date: ${groupInfoData.date}`;
-
 }

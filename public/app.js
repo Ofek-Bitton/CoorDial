@@ -37,14 +37,18 @@ function login(event) {
 		return;
 	}
 	event.preventDefault();
-	localStorage.setItem(
+	sessionStorage.setItem(
 		"user-data",
+		JSON.stringify({ name: nameField.value, password: passwordField.value })
+	);
+	localStorage.setItem(
+		"last-login",
 		JSON.stringify({ name: nameField.value, password: passwordField.value })
 	);
 	document.location.href = "create-group/create-group.html";
 }
 
-const lastLogin = JSON.parse(localStorage.getItem("user-data"));
+const lastLogin = JSON.parse(localStorage.getItem("last-login"));
 
 if (lastLogin != null) {
 	nameField.value = lastLogin.name;
